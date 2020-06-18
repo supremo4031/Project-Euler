@@ -4,4 +4,10 @@
     <string name="time_of_post">Jun 17, 2020 . 12 : 35</string>
     <string name="user_text">Hi I am Arpan, this is my new post. Check it out and let me know how it is.
                              Wait for the next post.</string>
+    <string name="user_post_image">Image post by User</string>
+    <string name="likes">100 Likes</string>
+    <string name="shares">100 Shares</string>
+    <string name="Likes">Likes</string>
+    <string name="Comment">Comment</string>
+    <string name="Share">Share</string>
 </resources>
