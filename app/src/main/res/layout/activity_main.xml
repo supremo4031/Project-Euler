@@ -4,21 +4,16 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/colorPrimaryDark"
+    android:background="#64B5F6"
     tools:context=".MainActivity">
 
-    <TextView
-        android:id="@+id/hello"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
     <include layout="@layout/post_user_options"
-        android:layout_below="@id/hello"
+        android:id="@+id/user_details_layout"
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"/>
+    <include layout="@layout/post_user_text"
+        android:id="user_text_details"
+        android:layout_below="@id/user_details_layout"
         android:layout_height="wrap_content"
         android:layout_width="match_parent"/>
 </RelativeLayout>
