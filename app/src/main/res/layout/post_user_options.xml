@@ -1,7 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:orientation="horizontal"
-    android:background="#E6EE9C"
+    android:layout_margin="@dimen/cardview_compat_inset_shadow"
+    android:background="#FFFFFF"
     android:layout_width="match_parent"
     android:layout_height="wrap_content">
 
