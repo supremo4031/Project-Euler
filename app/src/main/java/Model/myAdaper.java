@@ -34,6 +34,17 @@ public class myAdaper extends RecyclerView.Adapter<myAdaper.ViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
+         Listitem listitem = listitems.get(position);
+         String likes = listitem.getLikes() + " likes";
+         String comments = listitem.getComments() + " comments";
+
+         holder.profile.setImageResource(listitem.getUser_image());
+         holder.post.setImageResource(listitem.getPost_image());
+         holder.description.setText(listitem.getDescription());
+         holder.name.setText(listitem.getName());
+         holder.date.setText(listitem.getDate());
+         holder.like.setText(likes);
+         holder.comment.setText(comments);
 
     }
 
@@ -43,11 +54,40 @@ public class myAdaper extends RecyclerView.Adapter<myAdaper.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public ImageView profile, post;
+        public ImageView profile, post, likeImage, commentImage;
         public TextView name, date, description, like, comment;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 
+            profile = itemView.findViewById(R.id.main_user_image);
+            post = itemView.findViewById(R.id.user_post_image);
+            name = itemView.findViewById(R.id.user_name);
+            date = itemView.findViewById(R.id.user_time_post);
+            description = itemView.findViewById(R.id.user_text);
+            like = itemView.findViewById(R.id.LikeInfo);
+            comment = itemView.findViewById(R.id.ShareInfo);
+            likeImage = itemView.findViewById(R.id.likeImage);
+            commentImage = itemView.findViewById(R.id.commentImage);
+
+            likeImage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Listitem listitem = listitems.get(getLayoutPosition());
+                    listitem.likes++;
+                    like.setText(String.valueOf(listitem.getLikes()) + " likes");
+                }
+            });
+
+            commentImage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Listitem listitem = listitems.get(getLayoutPosition());
+                    listitem.comments++;
+                    comment.setText(String.valueOf(listitem.getComments()) + " comments");
+                }
+            });
+
         }
+
     }
 }
