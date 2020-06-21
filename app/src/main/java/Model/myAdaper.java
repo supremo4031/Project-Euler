@@ -54,8 +54,8 @@ public class myAdaper extends RecyclerView.Adapter<myAdaper.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public ImageView profile, post, likeImage, commentImage;
-        public TextView name, date, description, like, comment;
+        public ImageView profile, post;
+        public TextView name, date, description, like, comment, likeImage, commentImage;
         public ViewHolder(@NonNull View itemView) {
             super(itemView);
 

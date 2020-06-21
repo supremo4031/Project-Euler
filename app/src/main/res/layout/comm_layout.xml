@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:background="#CFD8DC"
@@ -40,31 +39,38 @@
         android:weightSum="3"
         android:padding="10sp">
 
-        <ImageView
+        <TextView
             android:id="@+id/likeImage"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="4dp"
-            app:srcCompat="@drawable/ic_thumb_up"
-            android:contentDescription="@string/Likes"/>
+            android:text="@string/Likes"
+            android:drawableTop="@drawable/ic_thumb_up"
+            android:gravity="center"
+            android:contentDescription="@string/Likes"
+            />
 
-        <ImageView
+        <TextView
             android:id="@+id/commentImage"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="4dp"
-            app:srcCompat="@drawable/ic_comment"
+            android:drawableTop="@drawable/ic_comment"
+            android:text="@string/Comment"
+            android:gravity="center"
             android:contentDescription="@string/Comment"/>
 
-        <ImageView
+        <TextView
             android:id="@+id/shareImage"
-            android:layout_width="wrap_content"
-            android:layout_height="40dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
             android:layout_weight="1"
             android:padding="4dp"
-            app:srcCompat="@drawable/ic_reply"
+            android:drawableTop="@drawable/ic_reply"
+            android:text="@string/Share"
+            android:gravity="center"
             android:contentDescription="@string/Share"/>
 
     </LinearLayout>
