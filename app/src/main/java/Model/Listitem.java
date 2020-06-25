@@ -1,42 +1,35 @@
 package Model;
 
 public class Listitem {
-    public int user_image;
-    public int post_image;
-    public long likes;
-    public long comments;
-    public String name;
-    public String date;
-    public String description;
+    private int userImage, postImage, likeImageFlag = 0;
+    private long likes, comments;
+    private String name, date, description;
 
-    public Listitem() {
-
-    }
-
-    public Listitem(int post_image, int user_image, long likes, long comments, String name, String date, String description) {
-        this.user_image = user_image;
-        this.post_image = post_image;
+    public Listitem(int postImage, int userImage, long likes, long comments, String name, String date, String description) {
+        this.userImage = userImage;
+        this.postImage = postImage;
         this.likes = likes;
         this.comments = comments;
         this.name = name;
         this.date = date;
         this.description = description;
+
     }
 
-    public int getUser_image() {
-        return user_image;
+    public int getUserImage() {
+        return userImage;
     }
 
-    public void setUser_image(int user_image) {
-        this.user_image = user_image;
+    public void setUserImage(int user_image) {
+        this.userImage = user_image;
     }
 
-    public int getPost_image() {
-        return post_image;
+    public int setPostImage() {
+        return postImage;
     }
 
-    public void setPost_image(int post_image) {
-        this.post_image = post_image;
+    public void setPostImage(int post_image) {
+        this.postImage = post_image;
     }
 
     public long getLikes() {
@@ -78,4 +71,13 @@ public class Listitem {
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public int getLikeFlag() {
+        return likeImageFlag;
+    }
+
+    public void setLikeFlag(int likeImageFlag) {
+        this.likeImageFlag = likeImageFlag;
+    }
+
 }
