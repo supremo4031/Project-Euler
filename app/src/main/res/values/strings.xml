@@ -5,10 +5,28 @@
     <string name="user_text">Hi I am Arpan, this is my new post. Check it out and let me know how it is.
                              Wait for the next post.</string>
     <string name="user_post_image">Image post by User</string>
+
+
+    <string name="Default">Default</string>
+
+    <!--     COMM LAYOUT SECTION     -->
     <string name="likes">100 Likes</string>
     <string name="shares">100 Shares</string>
-    <string name="Likes">Likes</string>
+    <string name="Like">Like</string>
+    <string name="Liked">Liked</string>
     <string name="Comment">Comment</string>
     <string name="Share">Share</string>
-    <string name="Default">Default</string>
+
+
+    <!--  BOTTOM NAVIGATION SECTION  -->
+    <string name="Home">Home</string>
+    <string name="Trending">Trending</string>
+    <string name="Notification">Notifications</string>
+    <string name="Profile">Profile</string>
+
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+
 </resources>
