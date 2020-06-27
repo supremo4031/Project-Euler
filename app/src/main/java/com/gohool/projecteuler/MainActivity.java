@@ -42,6 +42,9 @@ public class MainActivity extends AppCompatActivity {
                     case R.id.bottomNavTrendingButton :
                         selectedFragment = new Trending();
                         break;
+                    case R.id.bottomNavFavoriteButton:
+                        selectedFragment = new Favorite();
+                        break;
                     case R.id.bottomNavNotificationButton :
                         selectedFragment = new Notification();
                         break;
