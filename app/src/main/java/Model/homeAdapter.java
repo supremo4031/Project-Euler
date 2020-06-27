@@ -57,7 +57,7 @@ public class homeAdapter extends RecyclerView.Adapter<homeAdapter.ViewHolder> {
     }
 
     public class ViewHolder extends RecyclerView.ViewHolder {
-        public ImageView profile, post, likeImage;
+        public ImageView profile, post, likeImage, favImage;
         public TextView name, date, description, like, comment, commentImage, likeText;
         private LinearLayout likeContainer;
         public ViewHolder(@NonNull View itemView) {
@@ -72,6 +72,7 @@ public class homeAdapter extends RecyclerView.Adapter<homeAdapter.ViewHolder> {
             comment = itemView.findViewById(R.id.ShareInfo);
             likeContainer = itemView.findViewById(R.id.likeContainer);
             commentImage = itemView.findViewById(R.id.commentImage);
+            favImage = itemView.findViewById(R.id.favoritePostImage);
 
             likeImage = itemView.findViewById(R.id.likeImage);
             likeText = itemView.findViewById(R.id.likeText);
@@ -102,6 +103,20 @@ public class homeAdapter extends RecyclerView.Adapter<homeAdapter.ViewHolder> {
                     Listitem listitem = listitems.get(getLayoutPosition());
                     listitem.setComments(listitem.getComments() + 1);
                     comment.setText(String.valueOf(listitem.getComments()) + " comments");
+                }
+            });
+
+            favImage.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Listitem listitem = listitems.get(getLayoutPosition());
+                    if(listitem.getFavImageFlag() == 0) {
+                        favImage.setImageResource(R.drawable.round_favorite_icon);
+                        listitem.setFavImageFlag(1);
+                    } else {
+                        favImage.setImageResource(R.drawable.round_favorite_border_icon);
+                        listitem.setFavImageFlag(0);
+                    }
                 }
             });
 

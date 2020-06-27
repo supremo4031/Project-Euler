@@ -1,7 +1,7 @@
 package Model;
 
 public class Listitem {
-    private int userImage, postImage, likeImageFlag = 0;
+    private int userImage, postImage, likeImageFlag = 0, favImageFlag = 0;
     private long likes, comments;
     private String name, date, description;
 
@@ -80,4 +80,7 @@ public class Listitem {
         this.likeImageFlag = likeImageFlag;
     }
 
+    public int getFavImageFlag() { return favImageFlag; }
+
+    public void setFavImageFlag(int favImageFlag) { this.favImageFlag = favImageFlag; }
 }

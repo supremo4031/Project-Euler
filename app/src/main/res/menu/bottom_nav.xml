@@ -12,6 +12,11 @@
         android:icon="@drawable/round_trending_icon"
         android:enabled="true" />
     <item
+        android:id="@+id/bottomNavFavoriteButton"
+        android:title="@string/Favorite"
+        android:icon="@drawable/round_favorite_icon"
+        android:enabled="true" />
+    <item
         android:id="@+id/bottomNavNotificationButton"
         android:title="@string/Notification"
         android:icon="@drawable/round_notifications_icon"
